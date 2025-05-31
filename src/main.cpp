@@ -169,8 +169,10 @@ void readGPS()
             {
                 if (gps.location.isValid())
                 {
+                    
+                    Serial.print("Location");
                     Serial.print(sensorData.latitude);
-                    Serial.println("        ");
+                    Serial.print("        ");
                     Serial.print(sensorData.longitude);
                     sensorData.latitude = gps.location.lat();
                     sensorData.longitude = gps.location.lng();
